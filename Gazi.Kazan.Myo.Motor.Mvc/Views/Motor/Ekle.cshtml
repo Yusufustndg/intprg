@@ -1,0 +1,53 @@
+﻿@using Gazi.Kazan.Myo.Motor.Mvc.Models
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model IEnumerable<MotorModel>
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div>
+        <form method="post">
+            @Html.Label("Marka: ")
+            @Html.TextBox("Marka")
+            <br />
+            @Html.Label("Model: ")
+            @Html.TextBox("Model")
+            <br />
+            @Html.Label("Yakıt: ")
+            @Html.TextBox("Yakıt")
+            <br />
+            @Html.Label("Vıtes: ")
+            @Html.TextBox("Vıtes")
+            <br />
+            @Html.Label("Kasa Tipi: ")
+            @Html.TextBox("KasaTıpı")
+            <br />
+            @Html.Label("Yılı: ")
+            @Html.TextBox("Yılı")
+            <br />
+            @Html.Label("Beygir: ")
+            @Html.TextBox("Beygir")
+            <br />
+            @Html.Label("Tork: ")
+            @Html.TextBox("Tork")
+            <br />
+            @Html.Label("Motor Hacmi: ")
+            @Html.TextBox("Hacim")
+            <br />
+            @Html.Label("Çekiş Türü: ")
+            @Html.TextBox("Cekısturu")
+            <br />
+            @Html.Label("Renk: ")
+            @Html.TextBox("Renk")
+            <br />
+            <input type="submit" class="btn btn-primary" value="Kayıt Yap" />
+        </form>
+    </div>
+</body>
+</html>

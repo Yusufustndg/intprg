@@ -1,0 +1,77 @@
+﻿
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div>
+        <h3>MOTORSİKLET BİLGİLERİ İÇİN BURASI</h3>
+    </div>
+    @if (Session["Admin"] == null)
+    {
+        <div>
+            <h3>Lütfen Giriş Yapınız.!</h3>
+        </div>
+    }
+    <br />
+    @if (Session["Admin"] != null)
+    {
+        <h1>@Session["Admin"] Hoş Geldiniz</h1>
+    }
+    <br />
+    <table style="width:100%">
+        <tr>
+            <td><h4>Marka</h4></td>
+            <td><h4>Model</h4></td>
+            <td><h4>Yakıt</h4></td>
+            <td><h4>Vıtes</h4></td>
+            <td><h4>Kasa tipi</h4></td>
+            <td><h4>Yılı</h4></td>
+            <td><h4>Beygir</h4></td>
+            <td><h4>Tork</h4></td>
+            <td><h4>Motor Hacmi</h4></td>
+            <td><h4>Çekiş Türü</h4></td>
+            <td><h4>RENK</h4></td>
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Marka</td>
+                <td>@item.Model</td>
+                <td>@item.Yakıt</td>
+                <td>@item.Vıtes</td>
+                <td>@item.KasaTıpı</td>
+                <td>@item.Yılı</td>
+                <td>@item.Beygir</td>
+                <td>@item.Tork</td>
+                <td>@item.Hacim</td>
+                <td>@item.Cekısturu</td>
+                <td>@item.Renk</td>
+                @if (Session["admin"] != null)
+                {
+                    <td>
+                        <a href="/Ozellik/Guncelle/@item.Id">Güncelle</a>
+                    </td>
+                    <td>
+                        <a href="/Ozellik/Sil/@item.Id" class="btn btn-sm btn-danger" onclick="return confirm('Bu Motoru silmek istediğinizden emin misiniz?')">Sil</a>
+                    </td>
+                }
+            </tr>
+        }
+    </table>
+    @if (Session["Admin"] != null)
+    {
+        <div>
+            <input type="button" value="Özellik Ekle" />
+        </div>
+    }
+
+</body>
+</html>

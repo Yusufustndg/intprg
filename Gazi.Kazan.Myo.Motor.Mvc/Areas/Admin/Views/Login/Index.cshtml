@@ -1,0 +1,26 @@
+﻿
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div>
+        <form method="post">
+            @Html.Label("Kullanıcı Adı: ")
+            @Html.TextBox("KullanıcıAdı")
+            <br />
+            @Html.Label("Şifre: ")
+            @Html.Password("Sifre")
+            <br />
+            <input type="submit" class="btn btn-success" value="Giriş Yap" />
+        </form>
+    </div>
+</body>
+</html>

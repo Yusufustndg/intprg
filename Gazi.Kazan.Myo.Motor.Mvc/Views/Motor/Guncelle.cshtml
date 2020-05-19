@@ -1,0 +1,56 @@
+﻿@model Gazi.Kazan.Myo.Motor.Mvc.Models.MotorModel
+    @{ 
+        Layout = "~/Views/Shared/_Layout.cshtml";
+    }
+
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Guncelle</title>
+</head>
+<body>
+    <div>
+        <form method="post">
+            @Html.Label("Marka")
+            @Html.TextBox("Marka", Model.Marka)
+            <br />
+            @Html.Label("Model")
+            @Html.TextBox("Model", Model.Model)
+            <br />
+            @Html.Label("Yakıt")
+            @Html.TextBox("Yakıt", Model.Yakıt)
+            <br />
+            @Html.Label("Vıtes")
+            @Html.TextBox("Vıtes", Model.Vıtes)
+            <br />
+            @Html.Label("KasaTıpı")
+            @Html.TextBox("KasaTıpı", Model.KasaTıpı)
+            <br />
+            @Html.Label("Yılı")
+            @Html.TextBox("Yılı", Model.Yılı)
+            <br />
+            @Html.Label("Beygir")
+            @Html.TextBox("Beygir", Model.Beygir)
+            <br />
+            @Html.Label("Tork")
+            @Html.TextBox("Tork", Model.Tork)
+            <br />
+            @Html.Label("Hacim")
+            @Html.TextBox("Hacim", Model.Hacim)
+            <br />
+            @Html.Label("Cekısturu")
+            @Html.TextBox("Cekısturu", Model.Cekısturu)
+            <br />
+            @Html.Label("Renk")
+            @Html.TextBox("Renk", Model.Renk)
+            <br />
+            <input type="submit" class="btn btn-success" value="Kaydet" />
+            <a href="/Home/Index" class="btn btn-danger">İptal</a>
+        </form>
+    </div>
+</body>
+</html>
